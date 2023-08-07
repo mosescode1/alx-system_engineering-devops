@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "yes" > s_cwd_content
+echo "yes" > ls_cwd_content
