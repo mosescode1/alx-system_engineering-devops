@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# Let's parse Apache logs
 # Apache log file path
 log_file="apache-access.log"
 
