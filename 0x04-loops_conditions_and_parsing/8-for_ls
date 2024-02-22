@@ -6,8 +6,10 @@
 
 files=$(ls)
 for file in $files; do
-    if [[ "$file" == *-* ]]; then
-        file_name=$(echo "$file" | cut -d'-' -f2-)
-        echo "$file_name"
+    if [ -e "$file" ] && [ -f "$file"]; then
+        if [[ "$file" == *-* ]]; then
+            file_name=$(echo "$file" | cut -d'-' -f2-)
+            echo "$file_name"
+        fi
     fi
 done
