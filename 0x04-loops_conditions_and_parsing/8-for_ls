@@ -7,7 +7,7 @@
 files=$(ls)
 for file in $files; do
     if [[ "$file" == *-* ]]; then
-        file_name=$(echo "$file" | cut -d'-' -f2)
+        file_name=$(echo "$file" | cut -d'-' -f2-)
         echo "$file_name"
     fi
 done
