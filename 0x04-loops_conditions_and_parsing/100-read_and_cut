@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# read file
+
+while IFS=: read -r username _ userid _ homedir _;
+do
+    # aboslute=$(readlink -f "$homedir")
+    echo "$username:$userid:$homedir"
+done < "/etc/passwd"
