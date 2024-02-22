@@ -4,9 +4,13 @@ var="Best School"
 i=1
 
 while [ $i -lt 11 ]; do
-    echo "$var"
-     if [ $i -eq 9 ]; then
-        echo "Hi"
+    
+    if [ $i -eq 4 ]; then
+        echo "bad luck"
+    elif [ $i -eq 8 ]; then
+        echo "good luck"
+    else
+        echo "$var"
     fi
     i=$((i + 1))
 done
