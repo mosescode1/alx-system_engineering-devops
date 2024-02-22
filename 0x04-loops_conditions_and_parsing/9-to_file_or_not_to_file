@@ -2,11 +2,11 @@
 file="school"
 
 if [ -e "$file" ]; then
-    echo "$file file exists"
+    echo "school file exists"
 
     if [ -s "$file" ]; then
         echo "school file is not empty"
-    else
+    elif [ ! -s "$file" ]; then
         echo "school file is empty"
     fi
 
