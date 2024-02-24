@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Get the PID of the current script
+pgrep -l bash
