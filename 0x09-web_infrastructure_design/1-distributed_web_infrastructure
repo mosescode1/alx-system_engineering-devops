@@ -1,1 +1,60 @@
-https://imgur.com/a/bVNr0Tq
+image-link : https://imgur.com/a/bVNr0Tq
+
+# Questions
+
+- For every additional element, why you are adding it
+  ```
+    - 2-server:
+        to reduce the work load on just one server and for scalability
+    - load balancer:
+        distribute the incommming traffic using round robin algorithm
+  ```
+- What distribution algorithm your load balancer is configured with and how it works
+  ```
+    - round roubin algorithm:
+        this algorimthm shares the traffic sequentially to the servers
+  ```
+- Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both
+
+  ```
+  An active-active setup
+
+  the diffrence between both is in active both system are currenty working while in active passive just one system is working
+
+  ```
+
+- How a database Primary-Replica (Master-Slave) cluster works
+  - What is the difference between the Primary node and the Replica node in regard to the application
+
+```
+
+- How it works
+
+One node serves as the master and the rest serves as the replica the master handles both read and write and the slaves just replicates data and serves just lead only operation
+
+The deiffrence is INSERT,UPDATE, DElETE operations are first applid to the master and the replica replicates the data from the master
+
+```
+
+## You must be able to explain what the issues are with this infrastructure:
+
+Where are SPOF
+
+```
+- the load balancer
+- the master database
+```
+
+Security issues (no firewall, no HTTPS)
+
+```
+User information is not yet secured which might lead to loss of information
+
+No firewall this can leads to malicious code affecting our code base
+```
+
+No monitoring
+
+```
+The performance or Health guage of the server is not being monitored
+```

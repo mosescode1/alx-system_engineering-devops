@@ -1,1 +1,51 @@
 https://imgur.com/a/fOH5ikG
+
+# Question
+
+## you must be able to explain some specifics about this infrastructure:
+
+- What is a server
+  ```
+  A server is a physical or software device that provived services to other computer they are typically hosted in data centers... this is the operating system
+  ```
+- What is the role of the domain name
+  ```
+  Domain name is a readable human format of url which can be translated to an ip address by dns so computers can communicate
+  ```
+- What type of DNS record www is in www.foobar.com
+  ```
+  The conical record
+  ```
+- What is the role of the web server
+
+```
+    The webserver recieves request from the user and serves the web-page requested back to the user
+```
+
+- What is the role of the application server
+  ```
+  The application server role is to deal with functionality and bussiness logic requested by the client
+  ```
+- What is the role of the database
+  ```
+  the role of the database is to store usefull information that can be accessed by the application server and most importantly Crud operations can be performed
+  ```
+- What is the server using to communicate with the computer of the user requesting the website
+  ```
+  it uses TCP/IP
+  ```
+
+## You must be able to explain what the issues are with this infrastructure:
+
+- SPOF
+  ```
+  When one systen fails the whole system is down
+  ```
+- Downtime when maintenance needed (like deploying new code web server needs to be restarted)
+  ```
+  When there is an Update to the code base or database a downtime occurs Because there is just one server and when one point is out the whole system is out
+  ```
+  Cannot scale if too much incoming traffic
+  ```
+  Whne more users are requesting at the same time the servers get over worked and it causes the server to overload
+  ```

@@ -3,15 +3,22 @@ https://imgur.com/a/eMyDghC
 # Questions:
 
 - For every additional element, why you are adding it
+
   ```
-  - SSL certificate
-  - Firewall
-  - monitoring service
+  - SSL certificate:
+    this encrytpt the request from the user and server to ensure secure connection
+      and prevent loss of infomation
+  - Firewall:
+    protects the firewall from malicious code and threats
+
+  - monitoring service:
+      used to check the performance of each server to know its health
   ```
+
 - What are firewalls for?
 
 ```
-  Firewalls serves a defences system against malicious code and threats
+  They serve as a defence system for the server, it protects the server against threats
 ```
 
 - Why is the traffic served over HTTPS
@@ -23,14 +30,38 @@ For secured connection and prevent loss of data
 - What monitoring is used for
 
 ```
-Used to monitor the performances level of our server
+Montitor is used to monitor the performances level of our server
 ```
 
 - How the monitoring tool is collecting data
+  ```
+  Agent Based monitoring - they collect information from the server operating system,application and services locally and send it to the cloud
+  ```
 - Explain what to do if you want to monitor your web server QPS
 
 ## You must be able to explain what the issues are with this infrastructure:
 
 - Why terminating SSL at the load balancer level is an issue
+  ```
+  - increased load on the load balancer
+  - Security concern
+  - addition configuration
+  - loss of end to end encryption
+  - loss of client ip address
+  - certificate management
+  ```
 - Why having only one MySQL server capable of accepting writes is an issue
+  ```
+  - single point of failure
+  - scalabilty limitation
+  - concurency issue
+  - Backup and restore complexity
+  ```
 - Why having servers with all the same components (database, web server and application server) might be a problem
+
+```
+- resource imbalance
+- single point of failure
+- lack of specialization
+- complexity in maintainace
+```
