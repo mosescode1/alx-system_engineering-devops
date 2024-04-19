@@ -6,6 +6,6 @@ file { $file_path:
   mode    => '0744',
   owner   => 'www-data',
   group   => 'www-data',
-  contain => 'I Love Puppet',
+  content => 'I Love Puppet',
 }
 
