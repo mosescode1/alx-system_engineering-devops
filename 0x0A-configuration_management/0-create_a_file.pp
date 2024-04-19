@@ -1,11 +1,10 @@
-# creating a file in /tmp
+# creating a file in /tmp  called school 
 $file_path = '/tmp/school'
 
 file { $file_path:
-  ensure  => 'present',
+  ensure  => 'file',
   mode    => '0744',
   owner   => 'www-data',
   group   => 'www-data',
-  content => 'I Love Puppet',
+  content => 'I Love Puppet\n',
 }
-
