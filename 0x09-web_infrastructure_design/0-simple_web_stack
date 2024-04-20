@@ -45,7 +45,7 @@ https://imgur.com/a/fOH5ikG
   ```
   When there is an Update to the code base or database a downtime occurs Because there is just one server and when one point is out the whole system is out
   ```
-  Cannot scale if too much incoming traffic
+- Cannot scale if too much incoming traffic
   ```
   Whne more users are requesting at the same time the servers get over worked and it causes the server to overload
   ```
