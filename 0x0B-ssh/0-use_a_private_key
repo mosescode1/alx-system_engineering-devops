@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A bash script that connect to tghe server using your private key 
+
+ssh ubuntu -i ~/.ssh/school
