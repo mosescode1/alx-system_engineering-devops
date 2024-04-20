@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# generating a rsa key for my server
+
+ssh-keygen -b 4096 -p betty -f ~/.ssh/school
