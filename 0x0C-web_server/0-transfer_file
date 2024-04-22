@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# transfering file to the server
 
 file="$1"
 username="$3"
