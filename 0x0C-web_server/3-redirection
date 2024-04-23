@@ -6,8 +6,8 @@ sudo apt-get -y install nginx
 sudo service nginx start
 echo "Hello World!" | sudo tee /var/www/html/index.html 
 
-new_string="server_name _;\nlocation {\n\trewrite ^\/redirect_me https:\/\/www.youtube.com permanent;\n}"
+new_string="server_name _;\n\tlocation /redirect_me {\n\t\trewrite ^\/redirect_me https:\/\/www.youtube.com permanent;\n\t}"
 # finds s/server_name _; in default configuration and replace it with new string
-sudo sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-enabled/default
+sudo sed -i "s#server_name _;#$new_string#"  /etc/nginx/sites-enabled/default
 
 sudo service nginx restart
