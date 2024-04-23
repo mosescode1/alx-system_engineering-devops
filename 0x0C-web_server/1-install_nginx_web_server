@@ -7,7 +7,7 @@ sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
 
 # create a static page content "Hello World"
-echo "Hello World!" | sudo tee /var/www/html/index.html > /dev/null
+echo "Hello World!" | sudo tee /var/www/html/index.html
 
 # restarts the ngix server
-sudo nginx service restart
+sudo service nginx restart

@@ -10,4 +10,4 @@ if [ "$#" -lt 4 ]; then
     echo "Usage: $0 PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
     exit 1
 fi
-scp "$file" "$username@$ip:~/ -i $path"
+scp -i $path" "$file" "$username@$ip:~/ 
