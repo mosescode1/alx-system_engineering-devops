@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+sudo apt update
+sudo apt install -y haproxy
+sudo systemctl start haproxy
+sudo systemctl enable haproxy
+
+# Creating a backup of the configuration file
+sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.backup
+
+# Appending frontend configuration
+sudo sed -i "$ a\\\n\nfrontend myfrontend\n\tbind :80\n\tdefault_backend myservers" /etc/haproxy/haproxy.cfg
+
+# Appending backend configuration
+sudo sed -i "$ a\\\n\nbackend myservers\n\tserver server1 107.23.92.1:80 check\n\tserver server2 100.26.249.41:80 check" /etc/haproxy/haproxy.cfg
+
+sudo service haproxy restart
