@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# creating a load balancing
 sudo apt update
 sudo apt install -y haproxy
 sudo systemctl start haproxy
