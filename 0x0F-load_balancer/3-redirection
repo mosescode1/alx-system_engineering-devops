@@ -1,9 +1,0 @@
-#!/usr/bin/env bash 
-# connfiguring nginx to have an header
-
-sudo apt-get update -y
-sudo apt-get -y install nginx
-sudo service nginx start
-echo "Hello World!" | sudo tee /var/www/html/index.html
-sudo sed -i "s#server {#server {\n\tadd_header X-Served-By \$hostname;#" /etc/nginx/sites-enabled/default
-sudo service nginx restart
