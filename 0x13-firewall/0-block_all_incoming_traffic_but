@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Setting up a ufw firewall
+sudo apt update
+sudo apt install ufw
+
+sudo ufw deny incoming
+sudo ufw allow outgoing
+sudo ufw allow 22
+sudo ufw allow 443
+sudo ufw allow 80
+
+
