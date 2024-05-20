@@ -16,13 +16,8 @@ if __name__ == "__main__":
 
     usr_name = user_name_res.get('username')
 
-    csv_list = []
-    for val in user_todo:
-        values = [val.get('userId'), usr_name, val.get(
-            "completed"), val.get("title")]
-        csv_list.append(values)
-
     filename = f"{id}.csv"
     with open(filename, mode="w", newline="") as file:
-        writer = csv.writer(file)
-        writer.writerows(csv_list)
+        for task in user_todo:
+            file.write('"{}","{}","{}","{}"\n'.format(
+                id, usr_name, task.get('completed'), task.get('title')))
