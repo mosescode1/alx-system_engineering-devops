@@ -2,9 +2,9 @@
 import requests
 import sys
 
-id = sys.argv[1]
 
 if __name__ == "__main__":
+    id = int(sys.argv[1])
     api_url_user_name = f"https://jsonplaceholder.typicode.com/users/{id}"
     user_name_res = requests.get(api_url_user_name).json()
 
