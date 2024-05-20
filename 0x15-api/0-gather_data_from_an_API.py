@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Returns Information About A page"""
 import requests
 import sys
 
