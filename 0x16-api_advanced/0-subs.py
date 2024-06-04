@@ -3,8 +3,6 @@
 and returns the number of subscribers
 """
 import requests
-import sys
-argv = sys.argv[1]
 
 
 def number_of_subscribers(subreddit):
